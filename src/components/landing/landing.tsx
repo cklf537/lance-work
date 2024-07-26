@@ -27,7 +27,19 @@ const navItem: NavItems[] = [
       link: "#",
       id: "004",
       alt: "Treanding",
-  }
+  },
+  {
+    title: "Signin",
+    link: "#",
+    id: "005",
+    alt: "Signin",
+},
+{
+  title: "Login",
+  link: "#",
+  id: "006",
+  alt: "Login",
+}
 ]
 
 export default function Landing() {  
