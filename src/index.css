@@ -597,7 +597,15 @@ video {
   display: flex;
 }
 
-.basis-1\/2 {
+.hidden {
+  display: none;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.basis-2\/4 {
   flex-basis: 50%;
 }
 
@@ -609,6 +617,26 @@ video {
   border-width: 1px;
 }
 
-.p-8 {
-  padding: 2rem;
+.p-4 {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:basis-3\/4 {
+    flex-basis: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:basis-3\/4 {
+    flex-basis: 75%;
+  }
 }
