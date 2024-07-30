@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite && buildcss",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "buildcss": "npx tailwindcss -i ./src/App.css -o ./src/index.css --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node -e console.log(\"hello\")"
   },
   "dependencies": {
     "react": "^18.3.1",
