@@ -32,13 +32,13 @@ const navItem: NavItems[] = [
   {
     title: "Sign up",
     link: "#",
-    id: "004",
+    id: "005",
     alt: "Signup",
 },
 {
   title: "Login",
   link: "#",
-  id: "004",
+  id: "006",
   alt: "Login",
 }
 ]

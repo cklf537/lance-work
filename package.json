@@ -9,7 +9,7 @@
     "buildcss": "npx tailwindcss -i ./src/App.css -o ./src/index.css --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "node -e console.log(\"hello\")"
+    "execute": "npm run dev | npm run buildcss"
   },
   "dependencies": {
     "react": "^18.3.1",

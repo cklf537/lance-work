@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavItems } from "../../../data/model";
 import Search from "../search/search";
+import { isTemplateElement } from "@babel/types";
 
 
 export default function Header({ navItem }: { navItem: NavItems[] }) {
@@ -20,7 +21,11 @@ export default function Header({ navItem }: { navItem: NavItems[] }) {
         <div className="w-full hidden lg:block md:block basis-2/4 p-4 items-end">
           <div className="flex place-content-end items-center text-sm">
             <Search />
-            {navItem && navItem.map((item, i) => i >= 4 ? <div className='px-5' key={item.id}>{item.title}</div> : "")}
+            <div className='px-5' key={`${navItem[4].id}`}>
+                <Link to={`/signup`}> {navItem[4].title} </Link>
+                </div>
+            <div></div>
+            {/* {navItem && navItem.map((item, i) => i >= 4 ? <div className='px-5' key={item.id}>{item.title}</div> : "")} */}
             <span className="material-symbols-outlined">menu</span>
           </div>
         </div>

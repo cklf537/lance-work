@@ -6,6 +6,7 @@ import ConnectWithCommunity from '../components/connectwithcommunity/connectwith
 import Landing from '../components/landing/landing';
 import { RouteObject } from 'react-router-dom';
 import Trending from '../components/treanding/treanding';
+import Signup from '../components/signup/signup';
 
 const routes: RouteObject[] = [
   {
@@ -27,6 +28,10 @@ const routes: RouteObject[] = [
       {
         path: '/treanding',
         element: <Trending />,
+      },
+      {
+        path: '/signup',
+        element: <Signup />,
       },
     ]
   },
