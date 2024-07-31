@@ -6,10 +6,10 @@ import Header from './header/header';
 
 const navItem: NavItems[] = [
   {
-      title: "Find jobs",
-      link: "/findjob",
+      title: "Referal",
+      link: "/referal",
       id: "001",
-      alt: "Find Jobs",
+      alt: "Internal refferal",
   },
   {
       title: "Connect with people",

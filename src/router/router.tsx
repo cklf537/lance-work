@@ -14,7 +14,7 @@ const routes: RouteObject[] = [
     element: <Landing />,
     children:[
       {
-        path: '/findjob',
+        path: '/referal',
         element: <FindJob />,
       },
       {
