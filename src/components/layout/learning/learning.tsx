@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { AppContext } from "../../../data/context";
+import {PostContext } from "../../../data/context";
+import { Posts } from "../../../data/model";
 
 export default function Learning() {
-  const posts = useContext(AppContext);
-  return <div>{
-    posts && posts[1].title
-    }Learning</div>;
+  
+ const posts = useContext<Posts[]>(PostContext);
+  return <div>{posts && posts.map(item=>item.title)}</div>;
 }

@@ -1,5 +1,6 @@
 import { createContext } from "react";
+import { Posts } from "./model";
 
-const AppContext = createContext({});
+const PostContext = createContext<Posts[]>([]);
 
-export {AppContext};
+export {PostContext};
