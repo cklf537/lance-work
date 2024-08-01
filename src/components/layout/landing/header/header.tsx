@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { NavItems } from "../../../data/model";
 import Search from "../search/search";
-import { isTemplateElement } from "@babel/types";
+import { NavItems } from "../../../../data/model";
 
 
 export default function Header({ navItem }: { navItem: NavItems[] }) {
@@ -9,7 +8,7 @@ export default function Header({ navItem }: { navItem: NavItems[] }) {
     <div className="w-full border">
       <div className="container mx-auto flex flex-row">
         <div className="flex w-full md:basis-3/4 lg:basis-3/4 p-4 pl-5 lg:pl-0 lg:pt-6">
-          <h1 className='text-1xl font-bold pr-5'>
+          <h1 className='text-1xl font-bold pr-5 text-purple-600'>
             <Link to={`${'\/'}`}>Lance-work</Link>
             </h1>
           <nav className='hidden lg:flex lg:item-center lg:text-sm lg:block'>
