@@ -29,9 +29,9 @@ function App() {
   return (
     <>
       <PostContext.Provider value={appData} >
-        <Categories.Provider value={[]}>
+        {/* <Categories.Provider value={[]}> */}
           <RouterProvider router={route} />
-        </Categories.Provider>
+        {/* </Categories.Provider> */}
       </PostContext.Provider>
     </>
   );
