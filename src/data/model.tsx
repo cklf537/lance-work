@@ -11,6 +11,13 @@ interface NavItems{
     title?: string;
     body?: string;
   }
+
+interface Category {
+    name?: string;
+    id?: number;
+    display_name?: string;
+    url?: string;
+}
   
 // type Posts<Post> = {
 //   data: Post;
@@ -37,4 +44,4 @@ interface NavItems{
 
   
   
-  export type {NavItems, Posts, Post};
+  export type {NavItems, Posts, Category};
