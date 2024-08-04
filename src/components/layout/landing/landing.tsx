@@ -1,7 +1,9 @@
+import { useContext } from 'react';
 import { NavItems } from '../../data/model';
 import Dashboard from '../landing/dashboard/dashboard';
 import Footer from './footer/footer';
 import Header from './header/header';
+import { AppContext } from '../../../data/context';
 
 
 const navItem: NavItems[] = [
@@ -44,6 +46,8 @@ const navItem: NavItems[] = [
 ]
 
 export default function Landing() {
+  const heading = useContext(AppContext);
+  console.log("heading-items", heading);
   return (
     <div className="">
       <div className=''>

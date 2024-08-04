@@ -3,4 +3,5 @@ import { Category, Posts } from "./model";
 
 const PostContext = createContext<Posts[]>([]);
 const Categories = createContext<Category[]>([])
-export {PostContext, Categories};
+const AppContext = createContext({});
+export {PostContext, Categories, AppContext};

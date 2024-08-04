@@ -1,16 +1,19 @@
 import { RouterProvider } from 'react-router-dom';
 import { routes } from './router/router';
-// import { AppRouter } from './model/model';
 import { createBrowserRouter } from 'react-router-dom';
-import { Categories, PostContext } from './data/context';
+import { AppContext, PostContext } from './data/context';
 import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import { Posts } from './data/model';
+import { appReducer, intitalState } from './appService';
+
 
 function App() {
 
   const route = createBrowserRouter(routes);
   const [appData, setAppData] = useState<Posts[]>([]);
+
+  const [state, dispatch] = useReducer(appReducer, intitalState);
 
   useEffect(() => {
     async function GetData() {
@@ -19,19 +22,14 @@ function App() {
       setAppData(dt);
     }
     GetData()
-
-
-
   }, [])
-
- 
 
   return (
     <>
       <PostContext.Provider value={appData} >
-        {/* <Categories.Provider value={[]}> */}
+        <AppContext.Provider value={state} >
           <RouterProvider router={route} />
-        {/* </Categories.Provider> */}
+        </AppContext.Provider>
       </PostContext.Provider>
     </>
   );
