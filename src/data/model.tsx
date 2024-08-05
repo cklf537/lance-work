@@ -18,7 +18,7 @@ interface ExtendCategory{
 
 interface Category extends ExtendCategory{
     name?: string;
-    id?: number;
+    // id?: number;
     display_name?: string;
     url?: string;
 }
@@ -42,19 +42,38 @@ interface AppHeader<NavItems>{
 
 interface Actions{
   type?: string;
-  payload?: AppState
+  payload?: {}
 }
 
-interface Login<Users, Groups>{
-  users?: Users;
-  groups?: Groups;
-}
-
-interface AppState{
-  login?: Login<Users[], Groups[]>;
+interface AppState<Users, Groups, NavItems, Category>{
+  users?: Users[];
+  groups?: Groups[];
   heading?: NavItems[];
   category?: Category[];
 }
+
+// interface Login<Users, Groups>{
+//   users?: Users;
+//   groups?: Groups;
+// }
+
+// interface Login1<Users, Groups>{
+//   users?: Users[];
+//   groups?: Groups[]
+// }
+
+// interface AppState{
+//   login?: Login<Users[], Groups[]>;
+//   heading?: NavItems[];
+//   category?: Category[];
+// }
+
+// interface AppState<Login, NavItems, Category>{
+//   login?: Login;
+//   heading?: NavItems[];
+//   category?: Category[];
+// }
+
 
 // interface AppState extends AppHeader<NavItems[]>, Login<Users[], Groups[]>, Users, Groups, Category{};
 
@@ -85,4 +104,4 @@ interface AppState{
 
   
   
-  export type {NavItems, Posts, Category, AppHeader, Groups, Users, AppState, Actions  };
+  export type {NavItems, Posts, Category, AppHeader, Groups, Users, AppState, Actions, SomeState  };

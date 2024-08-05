@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Search from "../search/search";
-import { NavItems } from "../../../../data/model";
+import { AppState, Category, Groups, NavItems, Users } from "../../../../data/model";
 
 
-export default function Header({ navItem }: { navItem: NavItems[] }) {
+  export default function Header(heading: AppState<Users, Groups, NavItems, Category>) {
   return (
     <div className="w-full border">
       <div className="container mx-auto flex flex-row">
@@ -12,7 +12,7 @@ export default function Header({ navItem }: { navItem: NavItems[] }) {
             <Link to={`${'\/'}`}>Lance-work</Link>
             </h1>
           <nav className='hidden lg:flex lg:item-center lg:text-sm lg:block'>
-            {navItem && navItem.map((nav, i) => i <= 3 ? <div className='px-5' key={nav.id}>
+            {heading.heading && heading.heading.map((nav, i) => i <= 3 ? <div className='px-5' key={nav.id}>
             <Link to={`${nav.link}`}>{nav.title}</Link>
             </div> : "")}
           </nav>
@@ -20,11 +20,10 @@ export default function Header({ navItem }: { navItem: NavItems[] }) {
         <div className="w-full hidden lg:block md:block basis-2/4 p-4 items-end">
           <div className="flex place-content-end items-center text-sm">
             <Search />
-            <div className='px-5' key={`${navItem[4].id}`}>
-                <Link to={`/signup`}> {navItem[4].title} </Link>
+            <div className='px-5' key={`${heading.heading &&  heading.heading[4].id}`}>
+                <Link to={`/signup`}> {heading.heading &&  heading.heading[4].title} </Link>
                 </div>
             <div></div>
-            {/* {navItem && navItem.map((item, i) => i >= 4 ? <div className='px-5' key={item.id}>{item.title}</div> : "")} */}
             <span className="material-symbols-outlined">menu</span>
           </div>
         </div>
