@@ -1,5 +1,7 @@
-import AdvancedSearch from "../../branding/advance-search/advanced-search";
-import Search from "../landing/search/search";
+// import AdvancedSearch from "../../common/advance-search/advanced-search";
+// import Search from "../../common/search/search";
+
+import AdvancedSearch from "../../common/advance-search/advanced-search";
 
 export default function FindJob() {
   return <>

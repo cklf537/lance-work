@@ -14,7 +14,7 @@ const routes: RouteObject[] = [
   {
     path: '/',
     element: <Landing />,
-    errorElement: <Error/>,
+    // errorElement: <Error/>,
     children:[
       {
         path: '/',
