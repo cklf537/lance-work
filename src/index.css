@@ -588,20 +588,16 @@ video {
   }
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
 }
 
 .absolute {
   position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.top-32 {
-  top: 8rem;
 }
 
 .left-0 {
@@ -621,10 +617,6 @@ video {
   margin-right: 1.25rem;
 }
 
-.ms-auto {
-  margin-inline-start: auto;
-}
-
 .flex {
   display: flex;
 }
@@ -637,20 +629,12 @@ video {
   height: 5rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-48 {
-  height: 12rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
 .h-96 {
   height: 24rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .max-h-dvh {
