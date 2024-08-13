@@ -1,12 +1,13 @@
-import { ReactC, ReactElement, ReactNode } from "react";
+import { ReactNode } from "react";
 import { AppState, Category, Groups, NavItems, Users } from "../../../data/model";
 import { Link } from "react-router-dom";
 
-type Props = {
-    children: ReactNode
+export interface Props {
+  children?: ReactNode;
+  heading: AppState<Users, Groups, NavItems, Category>;
 }
 
-export default function Navigation({props, heading}: {props:Props, heading: AppState<Users, Groups, NavItems, Category>}) {
+export default function Navigation({children, heading}: Props) {
   return (
     <div>
         <nav className='hidden lg:flex lg:gap-8 lg:item-center lg:text-sm lg:block'>
@@ -14,7 +15,7 @@ export default function Navigation({props, heading}: {props:Props, heading: AppS
             <Link to={`${nav.link}`}>{nav.title}</Link>
             </div> : "")}
           </nav>
-        // {props && props.children}
+        {children && children}
     </div>
   )
 }

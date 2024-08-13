@@ -12,14 +12,9 @@ import Navigation from "../navigation/navigation";
           <h1 className='text-1xl font-bold text-purple-600'>
             <Link to={`${'\/'}`}>Lance-work</Link>
             </h1>
-            <Navigation heading={heading} props>
-              {/* <p>This a sample</p> */}
+            <Navigation heading={heading}>
+              {/* <p>Level 2 and level 3 navigation component goes here</p>  */}
             </Navigation>
-          {/* <nav className='hidden lg:flex lg:gap-8 lg:item-center lg:text-sm lg:block'>
-            {heading.heading && heading.heading.map((nav, i) => i <= 3 ? <div className='' key={nav.id}>
-            <Link to={`${nav.link}`}>{nav.title}</Link>
-            </div> : "")}
-          </nav> */}
         </div>
         <div className="flex  gap-8 content-center group items-center justify-end text-sm">
           {/* <div className="flex place-content-end items-center text-sm"> */}
