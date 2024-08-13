@@ -12,7 +12,13 @@ export default {
         },
       ],
     },
-    extend: {},
+    extend: {
+    },
+  },
+  variants: {
+    extend: {
+      visibility: ["group-hover"],
+    },
   },
   plugins: [],
 };

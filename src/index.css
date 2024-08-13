@@ -588,6 +588,26 @@ video {
   }
 }
 
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-24 {
+  top: 6rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -605,51 +625,24 @@ video {
   display: none;
 }
 
-.size-auto {
-  width: auto;
-  height: auto;
-}
-
-.size-1\/2 {
-  width: 50%;
-  height: 50%;
-}
-
 .h-20 {
   height: 5rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .h-screen {
   height: 100vh;
 }
 
-.max-h-32 {
-  max-height: 8rem;
-}
-
-.max-h-96 {
-  max-height: 24rem;
-}
-
 .max-h-dvh {
   max-height: 100dvh;
 }
 
-.min-h-48 {
-  min-height: 12rem;
-}
-
 .min-h-96 {
   min-height: 24rem;
-}
-
-.min-h-fit {
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-}
-
-.min-h-dvh {
-  min-height: 100dvh;
 }
 
 .w-1\/2 {
@@ -660,16 +653,16 @@ video {
   width: 100%;
 }
 
-.basis-2\/4 {
-  flex-basis: 50%;
-}
-
-.flex-row {
-  flex-direction: row;
+.flex-auto {
+  flex: 1 1 auto;
 }
 
 .place-content-end {
   place-content: end;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-end {
@@ -680,8 +673,12 @@ video {
   align-items: center;
 }
 
-.items-baseline {
-  align-items: baseline;
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -692,20 +689,12 @@ video {
   gap: 1rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .rounded {
   border-radius: 0.25rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.rounded-br-lg {
-  border-bottom-right-radius: 0.5rem;
-}
-
-.rounded-tl-lg {
-  border-top-left-radius: 0.5rem;
 }
 
 .border {
@@ -717,28 +706,13 @@ video {
   background-color: rgb(147 51 234 / var(--tw-bg-opacity));
 }
 
-.bg-contain {
-  background-size: contain;
-}
-
-.bg-cover {
-  background-size: cover;
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-auto {
   background-size: auto;
-}
-
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-.bg-clip-content {
-  background-clip: content-box;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .bg-bottom {
@@ -753,12 +727,12 @@ video {
   padding: 0.5rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-5 {
@@ -771,28 +745,18 @@ video {
   padding-right: 2rem;
 }
 
-.pb-5 {
+.py-5 {
+  padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pl-8 {
-  padding-left: 2rem;
-}
-
-.pr-8 {
-  padding-right: 2rem;
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-center {
@@ -802,6 +766,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl {
@@ -828,13 +797,31 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
-  .md\:block {
-    display: block;
-  }
+.underline {
+  text-decoration-line: underline;
+}
 
-  .md\:basis-3\/4 {
-    flex-basis: 75%;
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+@media (min-width: 640px) {
+  @media (min-width: 768px) {
+    .sm\:md\:justify-center {
+      justify-content: center;
+    }
+
+    .sm\:md\:items-center {
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @media (min-width: 640px) {
+    .md\:sm\:justify-items-center {
+      justify-items: center;
+    }
   }
 }
 
@@ -861,8 +848,16 @@ video {
     width: 50%;
   }
 
-  .lg\:basis-3\/4 {
-    flex-basis: 75%;
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:px-0 {
@@ -870,12 +865,22 @@ video {
     padding-right: 0px;
   }
 
-  .lg\:pl-0 {
-    padding-left: 0px;
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
-  .lg\:pt-6 {
-    padding-top: 1.5rem;
+  .lg\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .lg\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .lg\:text-start {
+    text-align: start;
   }
 
   .lg\:text-sm {

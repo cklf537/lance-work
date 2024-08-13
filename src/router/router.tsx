@@ -8,15 +8,17 @@ import { RouteObject } from 'react-router-dom';
 import Trending from '../components/layout/treanding/treanding';
 import Signup from '../components/layout/signup/signup';
 import Home from '../components/layout/landing/home/home';
+import Error from '../components/common/error';
 
 const routes: RouteObject[] = [
   {
     path: '/',
     element: <Landing />,
+    // errorElement: <Error/>,
     children:[
       {
         path: '/',
-        element: <Home />
+        element: <Home />,
       },
       {
         path: '/referal',
