@@ -11,8 +11,8 @@ export default function Header(heading: AppState<Users, Groups, NavItems, Catego
   return (
     <div className="">
       <div className="container mx-auto h-20 flex px-5 lg:px-0 md:sm:justify-items-center sm:md:items-center sm:md:justify-center">
-        <div className="flex flex-auto gap-8  content-center items-center justify-start">
-          <h1 className='text-1xl font-bold text-purple-600'>
+        <div className="flex flex-auto gap-8 content-center items-center justify-start">
+          <h1 className='text-1xl font-bold text-purple-600 text-nowrap'>
             <Link to={`${'\/'}`}>Lance-work</Link>
           </h1>
           <Navigation 
@@ -22,12 +22,12 @@ export default function Header(heading: AppState<Users, Groups, NavItems, Catego
           ></Navigation>
         </div>
         <div className="flex gap-8 content-center items-center justify-end text-sm">
-          <Search />
           <div className="" key={`${heading.heading && heading.heading[4].id}`}>
-            <Link to={`/signup`}> {heading.heading && heading.heading[4].title} </Link>
+            <Link to={`/signup`} className="text-nowrap"> {heading.heading && heading.heading[4].title}</Link>
           </div>
-          <span className="material-symbols-outlined hover:group-hover" >menu</span>
+          <span className="material-symbols-outlined" onMouseOver={()=>{setMenuStatus(true)}}>menu</span>
         </div>
+        
       </div>
     </div>
   );
