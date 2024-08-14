@@ -10,7 +10,7 @@ export default function Landing() {
   return (
     <div className=" ">
         <Header heading={heading} />
-        <Dashboard />``
+        <Dashboard />
         <Footer />
     </div>
   );

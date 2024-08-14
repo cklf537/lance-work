@@ -7,4 +7,10 @@
     html{
         @apply text-slate-700;
     }
+    h2{
+        @apply text-2xl font-bold leading-relaxed;
+    }
+    p{
+        @apply text-lg;
+    }
 }

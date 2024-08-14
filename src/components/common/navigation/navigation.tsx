@@ -13,7 +13,7 @@ export interface Props {
 export default function Navigation({ children, heading, menuStatus, setMenuStatus }: Props) {
   return (
     <div className="">
-      <Search />
+      {/* <Search /> */}
       <section className={`border bg-white p-5 w-full absolute h-96 top-24 left-0 ${menuStatus == false ? `invisible` : `visible`}`}
         onMouseOver={() => { setMenuStatus(true) }}
         onMouseOut={() => { setMenuStatus(false) }} >
