@@ -1,6 +1,6 @@
 // import img1 from "../../../assets/Screenshot 2024-07-31 at 5.36.10 PM.png"
 import { Link, NavLink } from "react-router-dom";
-import img1 from "../../../assets/p3.png"
+import img1 from "../../../assets/bg-img.png"
 import { useReducer } from "react";
 
 export default function BrandHero() {

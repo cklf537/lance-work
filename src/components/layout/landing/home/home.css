@@ -1,0 +1,23 @@
+.scroll-cls {
+    overflow: scroll;
+    scrollbar-color: red orange;
+    scrollbar-width: 1px;
+
+}
+
+/* width */
+.scroll-cls::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+.scroll-cls::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+.scroll-cls::-webkit-scrollbar-thumb {
+    background: #fbbf24;
+}
+
+

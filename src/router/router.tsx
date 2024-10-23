@@ -7,8 +7,9 @@ import Landing from '../components/layout/landing/landing';
 import { RouteObject } from 'react-router-dom';
 import Trending from '../components/layout/treanding/treanding';
 import Signup from '../components/layout/signup/signup';
-import Home from '../components/layout/landing/home/home';
+import Home from '../components/common/_archive/home_old/home-old';
 import Error from '../components/common/error';
+import JobForm from '../components/common/jobform/jobform';
 
 const routes: RouteObject[] = [
   {
@@ -40,6 +41,10 @@ const routes: RouteObject[] = [
         path: '/signup',
         element: <Signup />,
       },
+      {
+        path:'/jobform',
+        element:<JobForm />
+      }
     ]
   },
   

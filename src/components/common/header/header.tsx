@@ -9,10 +9,10 @@ export default function Header(heading: AppState<Users, Groups, NavItems, Catego
   const [menuStatus, setMenuStatus] = useState(collapseMenu);
 
   return (
-    <div className="">
-      <div className="container mx-auto h-20 flex px-5 lg:px-0 md:sm:justify-items-center sm:md:items-center sm:md:justify-center">
+    <div className="border-b fixed w-full bg-white">
+      <div className="container mx-auto h-20 flex px-5 lg:px-0 md:sm:justify-items-center sm:md:items-center sm:md:justify-center ">
         <div className="flex flex-auto gap-8 content-center items-center justify-start">
-          <h1 className='text-2xl font-bold text-purple-600 text-nowrap'>
+          <h1 className='text-2xl font-bold text-amber-600 text-nowrap'>
             <Link to={`${'\/'}`}>Lance-work</Link>
           </h1>
           <Navigation 

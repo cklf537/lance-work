@@ -14,13 +14,13 @@ export default function Navigation({ children, heading, menuStatus, setMenuStatu
   return (
     <div className="">
       {/* <Search /> */}
-      <section className={`border bg-white p-5 w-full absolute h-96 top-24 left-0 ${menuStatus == false ? `invisible` : `visible`}`}
+      <section className={`border bg-white p-5 w-full absolute h-96 top-20 left-0 ${menuStatus == false ? `invisible` : `visible`}`}
         onMouseOver={() => { setMenuStatus(true) }}
         onMouseOut={() => { setMenuStatus(false) }} >
         <div className="container mx-auto">
           <nav className=''>
             {heading.heading && heading.heading.map((nav, i) => (i >= 0 && i != 4) ? <div className='' key={nav.id}>
-              <Link to={`${nav.link}`} onMouseOver={() => { setMenuStatus(true) }} className="text-2xl font-bold text-purple-600">{nav.title}</Link>
+              <Link to={`${nav.link}`} onMouseOver={() => { setMenuStatus(true) }} className="text-2xl font-bold text-amber-600">{nav.title}</Link>
             </div> : "")}
           </nav>
         </div>

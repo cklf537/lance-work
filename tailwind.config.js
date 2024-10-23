@@ -18,6 +18,7 @@ export default {
   variants: {
     extend: {
       visibility: ["group-hover"],
+      focusVisible: ['responsive'],
     },
   },
   plugins: [],

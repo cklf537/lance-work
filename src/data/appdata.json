@@ -48,12 +48,12 @@
         }
     ],
     "category":[
-        {"name":"Information Technology", "categor_id": "cat01" },
-        {"name":"Accounting", "categor_id": "cat02" },
-        {"name":"Sales & Marketing", "categor_id": "cat03" },
-        {"name":"Designing", "categor_id": "cat04" },
-        {"name":"Writing", "categor_id": "cat05" },
-        {"name":"Print and Degital Media", "categor_id": "cat06" }
+        {"name":"Information Technology", "categor_id": "1" },
+        {"name":"Accounting", "categor_id": "2" },
+        {"name":"Sales & Marketing", "categor_id": "3" },
+        {"name":"Designing", "categor_id": "4" },
+        {"name":"Writing", "categor_id": "5" },
+        {"name":"Print and Degital Media2", "categor_id": "6" }
         
     ]
 }

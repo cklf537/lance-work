@@ -14,9 +14,9 @@ interface Posts{
 
 interface Category {
     name?: string;
-    category_id?: string;
-    display_name?: string;
-    url?: string;
+    categor_id?: string;
+    // display_name?: string;
+    // url?: string;
 }
 
 interface Groups{

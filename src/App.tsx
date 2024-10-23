@@ -1,10 +1,10 @@
 import { RouterProvider } from 'react-router-dom';
 import { routes } from './router/router';
 import { createBrowserRouter } from 'react-router-dom';
-import { AppContext, PostContext } from './data/context';
+import { AppContext, PostContext, CategoryContext } from './data/context';
 import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
-import { Posts } from './data/model';
+import { Category, Posts } from './data/model';
 import { appReducer, intitalState } from './appService';
 
 
